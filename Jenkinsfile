@@ -1,14 +1,17 @@
 pipeline {
   agent {
-    label "jenkins-maven"
+    label "jenkins-jx-base"
   }
-
-  
+  environment {
+    DEPLOY_NAMESPACE = "jx-staging"
+  }
   stages {
     stage('Validate Environment') {
       steps {
-        container('maven') {
-          sh 'make build'
+        container('jx-base') {
+          dir('env') {
+            sh 'jx step helm build'
+          }
         }
       }
     }
@@ -17,8 +20,10 @@ pipeline {
         branch 'master'
       }
       steps {
-        container('maven') {
-          sh 'make install'
+        container('jx-base') {
+          dir('env') {
+            sh 'jx step helm apply'
+          }
         }
       }
     }
