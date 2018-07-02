@@ -10,3 +10,6 @@ dependencies:
 - name: demo108
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.4
+- name: bdd-test-golang-http-1530530042
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
