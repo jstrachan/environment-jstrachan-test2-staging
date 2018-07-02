@@ -19,3 +19,6 @@ dependencies:
 - name: bdd-test-python-http-1530530042
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
+- name: bdd-test-aspnet-app-1530530042
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
