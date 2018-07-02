@@ -13,3 +13,6 @@ dependencies:
 - name: bdd-test-golang-http-1530530042
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
+- name: bdd-test-angular-io-quickstart-1530530042
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
