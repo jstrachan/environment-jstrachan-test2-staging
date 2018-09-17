@@ -10,3 +10,6 @@ dependencies:
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.58
+- name: reactiscool
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
