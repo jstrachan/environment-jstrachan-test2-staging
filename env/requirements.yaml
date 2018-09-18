@@ -13,6 +13,9 @@ dependencies:
 - name: godemo8
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
+- name: nodey28
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.1
 - name: reactiscool
   repository: http://jenkins-x-chartmuseum:8080
   version: 0.0.1
