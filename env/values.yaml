@@ -114,3 +114,18 @@ expose:
   Annotations:
     helm.sh/hook: post-install,post-upgrade
     helm.sh/hook-delete-policy: hook-succeeded
+expose:
+  config:
+    domain: 35.241.231.170.nip.io
+    exposer: Ingress
+    http: "true"
+    tlsacme: "false"
+    pathMode: ""
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        TILLER_NAMESPACE: kube-system
