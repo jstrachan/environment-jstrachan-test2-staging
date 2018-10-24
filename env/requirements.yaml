@@ -10,3 +10,6 @@ dependencies:
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
   version: 2.3.71
+- name: nodey30
+  repository: http://jenkins-x-chartmuseum:8080
+  version: 0.0.2
