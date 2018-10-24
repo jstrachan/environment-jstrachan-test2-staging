@@ -22,6 +22,7 @@ pipeline {
       steps {
         container('jx-base') {
           dir('env') {
+            sh 'jx step helm version'
             sh 'jx step helm apply'
           }
         }
