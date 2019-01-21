@@ -1,149 +1,3 @@
-expose:
-  Args: 
-    - --v
-    - 4
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-
-cleanup:
-  Args: 
-    - --cleanup
-  Annotations:
-    helm.sh/hook: pre-delete
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 104.199.86.186.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.195.219.34.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.190.210.195.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 146.148.15.7.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.205.69.148.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 130.211.53.117.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.195.52.159.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.233.66.245.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.240.21.231.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-    pathMode: ""
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.240.21.231.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-    pathMode: ""
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.189.197.153.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-    pathMode: ""
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-expose:
-  config:
-    domain: 35.241.231.170.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-    pathMode: ""
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-jenkins:
-  Servers:
-    Global:
-      EnvVars:
-        TILLER_NAMESPACE: kube-system
-expose:
-  config:
-    domain: 35.240.13.230.nip.io
-    exposer: Ingress
-    http: "true"
-    tlsacme: "false"
-    pathMode: ""
-  Annotations:
-    helm.sh/hook: post-install,post-upgrade
-    helm.sh/hook-delete-policy: hook-succeeded
-jenkins:
-  Servers:
-    Global:
-      EnvVars:
-        TILLER_NAMESPACE: kube-system
 ControllerBuild:
   Enabled: null
 ExposeController:
@@ -170,3 +24,26 @@ Prow:
   HMACtoken: ""
   OAUTHtoken: ""
   User: ""
+cleanup:
+  Annotations:
+    helm.sh/hook: pre-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --cleanup
+controllerbuild: {}
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  config:
+    domain: 35.233.10.249.nip.io
+    exposer: Ingress
+    http: "true"
+    pathMode: ""
+    tlsacme: "false"
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        TILLER_NAMESPACE: kube-system
+prow: {}
