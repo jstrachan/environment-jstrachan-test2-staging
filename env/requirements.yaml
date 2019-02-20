@@ -1,10 +1,4 @@
 dependencies:
-- name: demo167
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.2
-- name: demo168
-  repository: http://jenkins-x-chartmuseum:8080
-  version: 0.0.3
 - alias: expose
   name: exposecontroller
   repository: https://chartmuseum.build.cd.jenkins-x.io
